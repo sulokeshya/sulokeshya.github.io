@@ -1,168 +1,36 @@
-/* ---------- Base / Background ---------- */
 :root{
-  --warm-1:#fff8f0;
-  --accent:#b5651d;
-  --accent-dark:#8b3e0f;
-  --pill:#ffe4c4;
-  --card-bg:#ffffff;
+  --bg:#fff8f0; --accent:#b5651d; --accent-dark:#8b3e0f;
+  --pill:#ffe4c4; --card:#fff; --muted:#7a4b2a;
 }
+*{box-sizing:border-box} html,body{height:100%; margin:0; font-family:"Segoe UI",Roboto,Arial,sans-serif; background:var(--bg); color:#222; scroll-behavior:smooth;}
+.bg-bokeh{position:fixed; inset:0; z-index:-1; background:radial-gradient(circle at 15% 12%, rgba(255,224,190,0.08), transparent 22%), radial-gradient(circle at 70% 70%, rgba(255,200,150,0.06), transparent 26%), linear-gradient(180deg, rgba(255,245,235,0.35), rgba(255,245,235,0.05)); animation:bokeh-move 8s linear infinite; filter:blur(4px);}
+@keyframes bokeh-move{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.site-header{position:relative;padding:64px 18px 36px;text-align:center;background:linear-gradient(90deg,#fff2e6,#fff8f0);overflow:hidden;}
+.watermark{position:absolute; left:50%; top:50%; transform:translate(-50%,-42%); z-index:0; pointer-events:none; opacity:0.08; width:420px; max-width:70%;}
+.watermark img{width:100%; height:auto; display:block;}
+.header-inner{position:relative; z-index:1; max-width:1100px; margin:0 auto;}
+.site-header h1{margin:0; font-size:2.4rem; color:var(--accent);}
+.site-header .slogan{margin-top:8px; color:var(--muted);}
+.category-tiles{max-width:1200px;margin:18px auto;padding:0 18px; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px;}
+.tile{background:linear-gradient(180deg,#fff,#fffaf0); border-radius:12px; padding:14px; text-align:left; box-shadow:0 6px 18px rgba(0,0,0,0.04); border:1px solid rgba(0,0,0,0.03);}
+.tile h2{margin:0 0 8px;font-size:1.05rem;}
+.tile h2 a{color:var(--accent); text-decoration:none;}
+.tile-preview{display:flex; align-items:center; gap:10px;}
+.tile-preview img{width:100%; height:100px; object-fit:cover; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.04);}
+.tile-preview.grid{display:grid; grid-template-columns:repeat(2,1fr); gap:8px;}
+.preview-caption{font-size:0.9rem; color:var(--muted); padding-left:6px;}
+.collections{max-width:1200px;margin:28px auto;padding:0 18px 60px;}
+.collection{margin-bottom:48px;}
+.collection-head{text-align:center;margin-bottom:12px;}
+.collection-head h3{margin:0;color:var(--accent-dark); font-size:1.2rem;}
+.collection-sub{color:var(--muted); margin-top:6px;}
+.product-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:22px; margin-top:18px;}
+.product{background:var(--card); border-radius:12px; padding:12px; box-shadow:0 8px 22px rgba(0,0,0,0.04); border:1px solid rgba(0,0,0,0.03); display:flex; flex-direction:column; height:100%; transition:transform .22s, box-shadow .22s;}
+.product:hover{transform:translateY(-6px); box-shadow:0 18px 40px rgba(0,0,0,0.08);}
+.product img{width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:12px; box-shadow:0 0 10px rgba(255,200,140,0.16);}
+.product h4{margin:0 0 8px; font-size:1rem;}
+.meta{margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:10px;}
+.price{color:var(--accent); font-weight:700;}
+.buy{display:inline-block; padding:9px 12px
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  background:var(--warm-1);
-  color:#222;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  scroll-behavior:smooth;
-}
-
-/* subtle candle glow background made with gradients (no external images) */
-.candle-background{
-  position:fixed;
-  inset:0;
-  z-index:-1;
-  background:
-    radial-gradient(circle at 20% 18%, rgba(255,220,180,0.08), transparent 28%),
-    radial-gradient(circle at 75% 70%, rgba(255,200,150,0.06), transparent 30%);
-  animation:bg-flicker 6s ease-in-out infinite alternate;
-}
-@keyframes bg-flicker{
-  0%{opacity:0.95}
-  50%{opacity:1}
-  100%{opacity:0.9}
-}
-
-/* ---------- Header ---------- */
-.site-header{
-  position:relative;
-  padding:70px 20px;
-  text-align:center;
-  background:linear-gradient(90deg, #fff2e6 0%, #fff8f0 100%);
-  overflow:hidden;
-}
-
-.header-logo-watermark{
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  z-index:0;
-  pointer-events:none;
-  opacity:0.08;
-  width:420px;
-  max-width:60%;
-}
-.header-logo-watermark img{width:100%;height:auto;display:block}
-
-.header-inner{
-  position:relative;
-  z-index:1;
-  max-width:1100px;
-  margin:0 auto;
-}
-.site-header h1{
-  margin:0;
-  font-size:2.6rem;
-  color:var(--accent);
-  letter-spacing:0.5px;
-}
-.site-header .slogan{
-  margin-top:8px;
-  color:var(--accent-dark);
-  font-size:1.05rem;
-}
-
-/* ---------- Categories (pill menu) ---------- */
-.categories{display:flex;justify-content:center;padding:18px 20px 8px}
-.categories ul{
-  list-style:none;margin:0;padding:0;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;
-  max-width:1200px;width:100%;
-}
-.categories a{
-  display:inline-block;padding:9px 16px;border-radius:999px;background:var(--pill);color:var(--accent);text-decoration:none;font-weight:600;
-  transition:all .22s ease;
-  box-shadow:0 1px 0 rgba(0,0,0,0.04);
-}
-.categories a:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
-
-/* ---------- Main / Products ---------- */
-.products{max-width:1200px;margin:30px auto;padding:0 18px 60px}
-.section-title{text-align:center;font-size:1.9rem;margin:10px 0 28px;color:var(--accent-dark)}
-
-.product-collection{margin-bottom:48px}
-.collection-title{text-align:center;color:var(--accent-dark);font-size:1.25rem;margin-bottom:18px}
-
-/* product grid (collection style like reference) */
-.product-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:26px;
-  align-items:start;
-}
-
-/* product card */
-.product-card{
-  background:var(--card-bg);
-  border-radius:12px;
-  padding:14px;
-  text-align:left;
-  overflow:hidden;
-  border:1px solid rgba(0,0,0,0.03);
-  box-shadow:0 4px 14px rgba(9,9,10,0.03);
-  transition:transform .22s ease,box-shadow .22s ease;
-  display:flex;
-  flex-direction:column;
-  height:100%;
-}
-.product-card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(9,9,10,0.08)}
-
-/* media */
-.product-media{width:100%;display:block;border-radius:10px;overflow:hidden;margin-bottom:12px}
-.product-media img{display:block;width:100%;height:auto;object-fit:cover;border-radius:8px;transition:transform .35s ease,box-shadow .35s ease;}
-
-/* subtle candle glow (animated) around product image */
-.product-media img{
-  box-shadow:0 0 10px rgba(255,200,140,0.25);
-  animation:candle-glow 2.8s infinite alternate ease-in-out;
-}
-@keyframes candle-glow{
-  0%{box-shadow:0 0 8px rgba(255,200,140,0.18)}
-  50%{box-shadow:0 0 16px rgba(255,190,120,0.28)}
-  100%{box-shadow:0 0 10px rgba(255,200,140,0.22)}
-}
-
-/* product content */
-.product-body{padding:6px 2px 6px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
-.product-title{font-size:1rem;color:#222;margin:0 0 8px}
-.price{color:var(--accent);font-weight:700;margin-bottom:10px;font-size:1.03rem}
-
-/* buy button */
-.buy-btn{
-  display:inline-block;
-  text-align:center;
-  padding:10px 14px;
-  background:var(--accent);
-  color:#fff;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:700;
-  transition:transform .18s ease,background .18s ease;
-  box-shadow:0 6px 16px rgba(181,101,29,0.12);
-}
-.buy-btn:hover{transform:translateY(-3px);background:var(--accent-dark)}
-
-/* ---------- Footer ---------- */
-.site-footer{background:linear-gradient(180deg,#fff7ef,#fff0e6);padding:26px 18px;text-align:center;color:var(--accent-dark);border-top:1px solid rgba(0,0,0,0.03)}
-.site-footer a{color:var(--accent);font-weight:700;text-decoration:none}
-
-/* ---------- Responsive ---------- */
-@media(max-width:760px){
-  .site-header h1{font-size:1.8rem}
-  .header-logo-watermark{width:260px}
-  .categories{padding:14px 12px}
-  .categories a{padding:8px 12px;font-size:.95rem}
-}
 
