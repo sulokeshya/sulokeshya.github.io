@@ -1,53 +1,40 @@
-/* Body & Candle Flame Background */
+/* Body & Subtle Candle Background */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(180deg, #fff8f0 0%, #fff2e0 100%);
+  margin: 0; padding: 0;
+  background: #fff8f0;
   color: #333;
   position: relative;
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-/* Background flickering flames */
-.flame-background span {
+/* Candle background sparks */
+.candle-background {
   position: fixed;
-  display: block;
-  width: 8px;
-  height: 15px;
-  background: radial-gradient(circle, #FFD700 0%, #FFA500 60%, transparent 80%);
-  border-radius: 50%;
-  opacity: 0.2;
-  animation: flame-bg-flicker 2s infinite alternate;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at 20% 10%, rgba(255, 200, 150,0.08), transparent 30%),
+              radial-gradient(circle at 70% 30%, rgba(255, 180, 120,0.06), transparent 25%),
+              radial-gradient(circle at 50% 70%, rgba(255, 220, 140,0.05), transparent 35%);
+  z-index: -1;
+  animation: flicker 5s infinite alternate;
 }
 
-.flame-background span:nth-child(1){ top:10%; left:5%; animation-delay:0s;}
-.flame-background span:nth-child(2){ top:30%; left:15%; animation-delay:0.5s;}
-.flame-background span:nth-child(3){ top:50%; left:25%; animation-delay:1s;}
-.flame-background span:nth-child(4){ top:70%; left:35%; animation-delay:1.2s;}
-.flame-background span:nth-child(5){ top:20%; left:45%; animation-delay:0.3s;}
-.flame-background span:nth-child(6){ top:60%; left:55%; animation-delay:0.7s;}
-.flame-background span:nth-child(7){ top:40%; left:65%; animation-delay:1.1s;}
-.flame-background span:nth-child(8){ top:80%; left:75%; animation-delay:0.4s;}
-.flame-background span:nth-child(9){ top:15%; left:85%; animation-delay:0.9s;}
-.flame-background span:nth-child(10){ top:55%; left:95%; animation-delay:1.3s;}
-
-@keyframes flame-bg-flicker {
-  0% { opacity: 0.1; transform: scale(1); }
-  25% { opacity: 0.3; transform: scale(1.1); }
-  50% { opacity: 0.2; transform: scale(0.9); }
-  75% { opacity: 0.25; transform: scale(1.05); }
-  100% { opacity: 0.15; transform: scale(1); }
+@keyframes flicker {
+  0% { opacity: 0.07; }
+  25% { opacity: 0.09; }
+  50% { opacity: 0.06; }
+  75% { opacity: 0.08; }
+  100% { opacity: 0.07; }
 }
 
-/* Header with background logo */
+/* Header */
 header.header {
   text-align: center;
   padding: 80px 20px 60px;
   position: relative;
   background: linear-gradient(to right, #fff0e0, #ffe4c4);
-  overflow: hidden;
 }
 
 .header-background-logo img {
@@ -60,13 +47,6 @@ header.header {
   z-index: 0;
 }
 
-header .logo {
-  width: 180px;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 15px;
-}
-
 header h1, header .slogan {
   position: relative;
   z-index: 1;
@@ -75,30 +55,58 @@ header h1, header .slogan {
 header h1 { color: #b5651d; font-size: 2.5em; margin: 10px 0 5px; }
 header .slogan { color: #8b3e0f; font-size: 1.2em; }
 
-/* Navigation, Products, Footer remain the same except candle-image/flame effect */
-.candle-image { position: relative; display: inline-block; }
+/* Navigation */
+nav.categories ul {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  padding: 0; list-style: none; margin: 0 0 30px 0;
+}
+nav.categories ul li {
+  margin: 5px 10px; padding: 10px 15px;
+  background-color: #f7c27d; border-radius: 20px;
+}
+nav.categories ul li a {
+  color: #fff; text-decoration: none; font-weight: bold;
+  transition: 0.3s;
+}
+nav.categories ul li a:hover { background-color: #b5651d; padding: 10px 20px; }
 
-.flame {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 15px; height: 25px;
-  background: radial-gradient(circle, #FFD700 0%, #FFA500 60%, transparent 80%);
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  filter: drop-shadow(0 0 6px #FFD700);
-  animation: flame-flicker 0.5s infinite alternate;
-  z-index: 2;
+/* Products Grid */
+.products { display: flex; flex-direction: column; align-items: center; padding: 30px 10px; }
+.product-category { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 40px; justify-items: center; }
+.product-category h3 { text-align: center; font-size: 1.8em; margin-bottom: 20px; }
+.product { background-color: #fff3e0; border: 1px solid #f5d6b2; border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: 0.3s; }
+.product:hover { transform: scale(1.03); }
+.product img { max-width: 100%; border-radius: 8px; margin-bottom: 10px; }
+
+/* Buy Button */
+.buy-btn { display: inline-block; margin: 10px 0; padding: 10px 20px; background-color: #d2691e; color: white; text-decoration: none; border-radius: 12px; transition: 0.3s; }
+.buy-btn:hover { background-color: #b3540f; }
+
+/* Footer */
+footer { text-align: center; padding: 20px; background-color: #ffe4c4; margin-top: 40px; }
+footer a { color: #b5651d; text-decoration: none; }
+
+/* Responsive */
+@media(max-width:600px){ header h1{font-size:2em;} header .slogan{font-size:1em;} nav.categories ul{flex-direction:column;} nav.categories ul li{margin:5px 0;} }
+/* Candle light glow animation on product images */
+.product img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+  animation: candle-glow 2s infinite alternate;
 }
 
-@keyframes flame-flicker {
-  0% { transform: translateX(-50%) scaleY(1) scaleX(1); opacity: 0.8; }
-  25% { transform: translateX(-48%) scaleY(1.1) scaleX(1.05); opacity: 0.9; }
-  50% { transform: translateX(-52%) scaleY(0.95) scaleX(1); opacity: 0.85; }
-  75% { transform: translateX(-50%) scaleY(1.05) scaleX(1.02); opacity: 0.9; }
-  100% { transform: translateX(-50%) scaleY(1) scaleX(1); opacity: 0.8; }
+@keyframes candle-glow {
+  0% {
+    box-shadow: 0 0 8px rgba(255, 200, 150, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 14px rgba(255, 180, 120, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 200, 150, 0.5);
+  }
 }
-
-/* The rest of your previous product grid, buy-btn, footer CSS remains the same */
-
-
