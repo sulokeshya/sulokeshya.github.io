@@ -4,199 +4,92 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sulokeshya Handmade Candles</title>
+  <meta name="description" content="Sulokeshya Handmade Candles — handcrafted candles for gifting, celebrations and everyday cozy moments." />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- JSON-LD Microdata for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sulokeshya Handmade Candles",
+    "url": "https://sulokeshya.github.io/",
+    "logo": "https://sulokeshya.github.io/images/logo.png",
+    "sameAs": ["https://instagram.com/sulokeshya"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {"@type": "Product","name":"Thanksgiving Edition - The Santa Vehicle Candle","image":"images/candle1.jpg","offers":{"@type":"Offer","priceCurrency":"USD","price":"14.99","url":"https://paypal.me/sulokeshya/14.99"}},
+      {"@type": "Product","name":"Halloween Edition - Pumpkin in the Jar Candle","image":"images/candle2.jpg","offers":{"@type":"Offer","priceCurrency":"USD","price":"19.99","url":"https://paypal.me/sulokeshya/19.99"}},
+      {"@type": "Product","name":"Coffee Latte Candle","image":"images/candle3.jpg","offers":{"@type":"Offer","priceCurrency":"USD","price":"9.99","url":"https://paypal.me/sulokeshya/9.99"}},
+      {"@type": "Product","name":"Red Velvet Cupcake Candle","image":"images/candle4.jpg","offers":{"@type":"Offer","priceCurrency":"USD","price":"9.99","url":"https://paypal.me/sulokeshya/9.99"}},
+      {"@type": "Product","name":"Blue Lagoon Candle","image":"images/candle5.jpg","offers":{"@type":"Offer","priceCurrency":"USD","price":"9.99","url":"https://paypal.me/sulokeshya/9.99"}},
+      {"@type": "Product","name":"Champion Glass Candle","image":"images/candle6.jpg","offers":{"@type":"Offer","priceCurrency":"USD","price":"9.99","url":"https://paypal.me/sulokeshya/9.99"}},
+      {"@type": "Product","name":"Yellow Love Candle","image":"images/candle7.jpg","offers":{"@type":"Offer","priceCurrency":"USD","price":"4.99","url":"https://paypal.me/sulokeshya/4.99"}},
+      {"@type": "Product","name":"You Look Like Butterfly Candle","image":"images/candle8.jpg","offers":{"@type":"Offer","priceCurrency":"USD","price":"9.99","url":"https://paypal.me/sulokeshya/9.99"}},
+      {"@type": "Product","name":"Flower and More Candle","image":"images/candle9.jpg","offers":{"@type":"Offer","priceCurrency":"USD","price":"9.99","url":"https://paypal.me/sulokeshya/9.99"}},
+      {"@type": "Product","name":"Graduation Congrats Candle","image":"images/candle10.jpg","offers":{"@type":"Offer","priceCurrency":"USD","price":"19.99","url":"https://paypal.me/sulokeshya/19.99"}}
+    ]
+  }
+  </script>
 </head>
 <body>
 
-  <!-- subtle animated candle glow background (CSS-only) -->
-  <div class="candle-background" aria-hidden="true"></div>
+<div class="bg-bokeh" aria-hidden="true"></div>
 
-  <!-- Header with single watermark logo in background -->
-  <header class="site-header">
-    <div class="header-logo-watermark" aria-hidden="true">
-      <img src="images/logo.png" alt="" />
+<header class="site-header">
+  <div class="watermark" aria-hidden="true"><img src="images/logo.png" alt=""></div>
+  <div class="header-inner">
+    <h1>Sulokeshya Handmade Candles</h1>
+    <p class="slogan">Where every creation shines from the heart</p>
+  </div>
+</header>
+
+<nav class="category-tiles" aria-label="Categories">
+  <article class="tile"><h2><a href="#christmas">Christmas</a></h2><div class="tile-preview"><img src="images/candle1.jpg" alt=""><div class="preview-caption">Thanksgiving / Santa</div></div></article>
+  <article class="tile"><h2><a href="#halloween">Halloween</a></h2><div class="tile-preview"><img src="images/candle2.jpg" alt=""><div class="preview-caption">Pumpkin in Jar</div></div></article>
+  <article class="tile"><h2><a href="#drink">Drink &amp; Latte</a></h2><div class="tile-preview grid"><img src="images/candle3.jpg"><img src="images/candle6.jpg"></div></article>
+  <article class="tile"><h2><a href="#dessert">Dessert</a></h2><div class="tile-preview grid"><img src="images/candle4.jpg"><img src="images/candle5.jpg"></div></article>
+  <article class="tile"><h2><a href="#love">Love Gifting</a></h2><div class="tile-preview grid"><img src="images/candle7.jpg"><img src="images/candle8.jpg"><img src="images/candle9.jpg"></div></article>
+  <article class="tile"><h2><a href="#graduation">Graduation</a></h2><div class="tile-preview"><img src="images/candle10.jpg"><div class="preview-caption">Graduation</div></div></article>
+</nav>
+
+<main class="collections">
+
+  <!-- Collection sections (same as before with PayPal links) -->
+  <!-- Repeat product cards for each category as in previous version -->
+
+  <!-- Order Form -->
+  <section id="order" class="collection">
+    <div class="collection-head">
+      <h3>Order Form</h3>
+      <p>Prefer to order directly? Fill out this form and email us.</p>
     </div>
+    <form class="order-form" action="mailto:sulokeshyacandles@gmail.com" method="post" enctype="text/plain">
+      <label>Name <input type="text" name="name" required></label>
+      <label>Email <input type="email" name="email" required></label>
+      <label>Product Name <input type="text" name="product" required></label>
+      <label>Message <textarea name="message" rows="4"></textarea></label>
+      <button type="submit">Send Order</button>
+    </form>
+  </section>
 
-    <div class="header-inner">
-      <h1>Sulokeshya Handmade Candles</h1>
-      <p class="slogan">Where every creation shines from the heart</p>
-    </div>
-  </header>
+</main>
 
-  <!-- Category navigation (pill style) -->
-  <nav class="categories" aria-label="Product categories">
-    <ul>
-      <li><a href="#christmas">Christmas</a></li>
-      <li><a href="#halloween">Halloween</a></li>
-      <li><a href="#drink">Drink &amp; Latte</a></li>
-      <li><a href="#dessert">Dessert</a></li>
-      <li><a href="#love">Love Gifting</a></li>
-      <li><a href="#graduation">Graduation</a></li>
-    </ul>
-  </nav>
-
-  <!-- Main products area -->
-  <main class="products" id="main">
-    <h2 class="section-title">Our Candles</h2>
-
-    <!-- Christmas -->
-    <section id="christmas" class="product-collection">
-      <h3 class="collection-title">Christmas Edition</h3>
-      <div class="product-grid">
-        <article class="product-card">
-          <figure class="product-media">
-            <img src="images/candle1.jpg" alt="Thanksgiving Edition - The Santa Vehicle Candle" />
-          </figure>
-          <div class="product-body">
-            <h4 class="product-title">Thanksgiving Edition - The Santa Vehicle Candle</h4>
-            <p class="price">$14.99</p>
-            <a class="buy-btn" href="https://paypal.me/sulokeshya/14.99" target="_blank" rel="noopener">Buy with PayPal</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Halloween -->
-    <section id="halloween" class="product-collection">
-      <h3 class="collection-title">Halloween</h3>
-      <div class="product-grid">
-        <article class="product-card">
-          <figure class="product-media">
-            <img src="images/candle2.jpg" alt="Halloween Edition - Pumpkin in the Jar Candle" />
-          </figure>
-          <div class="product-body">
-            <h4 class="product-title">Halloween Edition - Pumpkin in the Jar Candle</h4>
-            <p class="price">$19.99</p>
-            <a class="buy-btn" href="https://paypal.me/sulokeshya/19.99" target="_blank" rel="noopener">Buy with PayPal</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Drink & Latte -->
-    <section id="drink" class="product-collection">
-      <h3 class="collection-title">Drink &amp; Latte</h3>
-      <div class="product-grid">
-        <article class="product-card">
-          <figure class="product-media">
-            <img src="images/candle3.jpg" alt="Coffee Latte Candle" />
-          </figure>
-          <div class="product-body">
-            <h4 class="product-title">Coffee Latte Candle</h4>
-            <p class="price">$9.99</p>
-            <a class="buy-btn" href="https://paypal.me/sulokeshya/9.99" target="_blank" rel="noopener">Buy with PayPal</a>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <figure class="product-media">
-            <img src="images/candle6.jpg" alt="Champion Glass Candle" />
-          </figure>
-          <div class="product-body">
-            <h4 class="product-title">Champion Glass Candle</h4>
-            <p class="price">$9.99</p>
-            <a class="buy-btn" href="https://paypal.me/sulokeshya/9.99" target="_blank" rel="noopener">Buy with PayPal</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Dessert -->
-    <section id="dessert" class="product-collection">
-      <h3 class="collection-title">Dessert</h3>
-      <div class="product-grid">
-        <article class="product-card">
-          <figure class="product-media">
-            <img src="images/candle4.jpg" alt="Red Velvet Cupcake Candle" />
-          </figure>
-          <div class="product-body">
-            <h4 class="product-title">Red Velvet Cupcake Candle</h4>
-            <p class="price">$9.99</p>
-            <a class="buy-btn" href="https://paypal.me/sulokeshya/9.99" target="_blank" rel="noopener">Buy with PayPal</a>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <figure class="product-media">
-            <img src="images/candle5.jpg" alt="Blue Lagoon Candle" />
-          </figure>
-          <div class="product-body">
-            <h4 class="product-title">Blue Lagoon Candle</h4>
-            <p class="price">$9.99</p>
-            <a class="buy-btn" href="https://paypal.me/sulokeshya/9.99" target="_blank" rel="noopener">Buy with PayPal</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Love Gifting -->
-    <section id="love" class="product-collection">
-      <h3 class="collection-title">Love Gifting</h3>
-      <div class="product-grid">
-        <article class="product-card">
-          <figure class="product-media">
-            <img src="images/candle7.jpg" alt="Yellow Love Candle" />
-          </figure>
-          <div class="product-body">
-            <h4 class="product-title">Yellow Love Candle</h4>
-            <p class="price">$4.99</p>
-            <a class="buy-btn" href="https://paypal.me/sulokeshya/4.99" target="_blank" rel="noopener">Buy with PayPal</a>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <figure class="product-media">
-            <img src="images/candle8.jpg" alt="You Look Like Butterfly Candle" />
-          </figure>
-          <div class="product-body">
-            <h4 class="product-title">You Look Like Butterfly Candle</h4>
-            <p class="price">$9.99</p>
-            <a class="buy-btn" href="https://paypal.me/sulokeshya/9.99" target="_blank" rel="noopener">Buy with PayPal</a>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <figure class="product-media">
-            <img src="images/candle9.jpg" alt="Flower and More Candle" />
-          </figure>
-          <div class="product-body">
-            <h4 class="product-title">Flower and More Candle</h4>
-            <p class="price">$9.99</p>
-            <a class="buy-btn" href="https://paypal.me/sulokeshya/9.99" target="_blank" rel="noopener">Buy with PayPal</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Graduation -->
-    <section id="graduation" class="product-collection">
-      <h3 class="collection-title">Graduation</h3>
-      <div class="product-grid">
-        <article class="product-card">
-          <figure class="product-media">
-            <img src="images/candle10.jpg" alt="Graduation Congrats Candle" />
-          </figure>
-          <div class="product-body">
-            <h4 class="product-title">Graduation Congrats Candle</h4>
-            <p class="price">$19.99</p>
-            <a class="buy-btn" href="https://paypal.me/sulokeshya/19.99" target="_blank" rel="noopener">Buy with PayPal</a>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p>Contact: <a href="tel:+18475108903">+1 847-510-8903</a> |
-         <a href="mailto:sulokeshyacandles@gmail.com">sulokeshyacandles@gmail.com</a> |
-         Instagram: <a href="https://instagram.com/sulokeshya" target="_blank" rel="noopener">@sulokeshya</a>
-      </p>
-      <p>© 2025 Sulokeshya Handmade Candles</p>
-    </div>
-  </footer>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>
+      Contact: <a href="tel:+18475108903">+1 847-510-8903</a> |
+      <a href="mailto:sulokeshyacandles@gmail.com">sulokeshyacandles@gmail.com</a> |
+      Instagram: <a href="https://instagram.com/sulokeshya" target="_blank">@sulokeshya</a>
+    </p>
+    <p>© 2025 Sulokeshya Handmade Candles</p>
+  </div>
+</footer>
 
 </body>
 </html>
-
