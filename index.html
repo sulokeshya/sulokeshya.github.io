@@ -8,19 +8,21 @@
 </head>
 <body>
 
-  <!-- Flickering candle background -->
-  <div class="candle-background"></div>
+  <!-- Candle flame background -->
+  <div class="flame-background">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
 
   <!-- Header -->
-<header class="header">
-  <div class="header-background-logo">
-    <img src="images/logo.png" alt="Sulokeshya Logo">
-  </div>
-  <img src="images/logo.png" alt="Sulokeshya Handmade Candles Logo" class="logo">
-  <h1>Sulokeshya Handmade Candles</h1>
-  <p class="slogan">Where every creation shines from the heart</p>
-</header>
-
+  <header class="header">
+    <div class="header-background-logo">
+      <img src="images/logo.png" alt="Sulokeshya Logo">
+    </div>
+    <img src="images/logo.png" alt="Sulokeshya Handmade Candles Logo" class="logo">
+    <h1>Sulokeshya Handmade Candles</h1>
+    <p class="slogan">Where every creation shines from the heart</p>
+  </header>
 
   <!-- Navigation / Categories -->
   <nav class="categories">
@@ -39,24 +41,19 @@
   </nav>
 
   <!-- Products -->
-  <div class="product">
-  <div class="candle-image">
-    <div class="flame"></div>
-    <img src="images/candle1.jpg" alt="Thanksgiving Edition - The Santa Vehicle Candle">
-  </div>
-  <h4>Thanksgiving Edition - The Santa Vehicle Candle</h4>
-  <p>$15</p>
-  <a class="buy-btn" href="https://paypal.me/YourName/15" target="_blank">Buy with PayPal</a>
-</div>
-
+  <section class="products">
+    <h2>Our Candles</h2>
 
     <!-- Christmas -->
     <div id="christmas" class="product-category">
       <h3>Christmas Edition</h3>
       <div class="product">
-        <img src="images/candle1.jpg" alt="Thanksgiving Edition - The Santa Vehicle Candle">
+        <div class="candle-image">
+          <div class="flame"></div>
+          <img src="images/candle1.jpg" alt="Thanksgiving Edition - The Santa Vehicle Candle">
+        </div>
         <h4>Thanksgiving Edition - The Santa Vehicle Candle</h4>
-        <p>$12.99</p>
+        <p>$14.99</p>
         <a class="buy-btn" href="https://paypal.me/YourName/15" target="_blank">Buy with PayPal</a>
       </div>
     </div>
@@ -65,9 +62,12 @@
     <div id="halloween" class="product-category">
       <h3>Halloween Candle</h3>
       <div class="product">
-        <img src="images/candle2.jpg" alt="Halloween Edition - Pumpkin in the Jar Candle">
+        <div class="candle-image">
+          <div class="flame"></div>
+          <img src="images/candle2.jpg" alt="Halloween Edition - Pumpkin in the Jar Candle">
+        </div>
         <h4>Halloween Edition - Pumpkin in the Jar Candle</h4>
-        <p>$14.99</p>
+        <p>$19.99</p>
         <a class="buy-btn" href="https://paypal.me/YourName/20" target="_blank">Buy with PayPal</a>
       </div>
     </div>
@@ -76,13 +76,19 @@
     <div id="drink" class="product-category">
       <h3>Drink & Latte Candle</h3>
       <div class="product">
-        <img src="images/candle3.jpg" alt="Coffee Latte Candle">
+        <div class="candle-image">
+          <div class="flame"></div>
+          <img src="images/candle3.jpg" alt="Coffee Latte Candle">
+        </div>
         <h4>Coffee Latte Candle</h4>
-        <p>$6.99</p>
+        <p>$9.99</p>
         <a class="buy-btn" href="https://paypal.me/YourName/18" target="_blank">Buy with PayPal</a>
       </div>
       <div class="product">
-        <img src="images/candle6.jpg" alt="Champion Glass Candle">
+        <div class="candle-image">
+          <div class="flame"></div>
+          <img src="images/candle6.jpg" alt="Champion Glass Candle">
+        </div>
         <h4>Champion Glass Candle</h4>
         <p>$9.99</p>
         <a class="buy-btn" href="https://paypal.me/YourName/22" target="_blank">Buy with PayPal</a>
@@ -93,13 +99,19 @@
     <div id="desert" class="product-category">
       <h3>Dessert</h3>
       <div class="product">
-        <img src="images/candle4.jpg" alt="Red Velvet Cupcake Candle">
+        <div class="candle-image">
+          <div class="flame"></div>
+          <img src="images/candle4.jpg" alt="Red Velvet Cupcake Candle">
+        </div>
         <h4>Red Velvet Cupcake Candle</h4>
-        <p>$9,99</p>
+        <p>$9.99</p>
         <a class="buy-btn" href="https://paypal.me/YourName/19" target="_blank">Buy with PayPal</a>
       </div>
       <div class="product">
-        <img src="images/candle5.jpg" alt="Blue Lagoon Candle">
+        <div class="candle-image">
+          <div class="flame"></div>
+          <img src="images/candle5.jpg" alt="Blue Lagoon Candle">
+        </div>
         <h4>Blue Lagoon Candle</h4>
         <p>$9.99</p>
         <a class="buy-btn" href="https://paypal.me/YourName/20" target="_blank">Buy with PayPal</a>
@@ -110,21 +122,30 @@
     <div id="love" class="product-category">
       <h3>Love Gifting</h3>
       <div class="product">
-        <img src="images/candle7.jpg" alt="Yellow Love Candle">
+        <div class="candle-image">
+          <div class="flame"></div>
+          <img src="images/candle7.jpg" alt="Yellow Love Candle">
+        </div>
         <h4>Yellow Love Candle</h4>
         <p>$4.99</p>
         <a class="buy-btn" href="https://paypal.me/YourName/18" target="_blank">Buy with PayPal</a>
       </div>
       <div class="product">
-        <img src="images/candle8.jpg" alt="You Look Like Butterfly Candle">
+        <div class="candle-image">
+          <div class="flame"></div>
+          <img src="images/candle8.jpg" alt="You Look Like Butterfly Candle">
+        </div>
         <h4>You Look Like Butterfly Candle</h4>
         <p>$9.99</p>
         <a class="buy-btn" href="https://paypal.me/YourName/18" target="_blank">Buy with PayPal</a>
       </div>
       <div class="product">
-        <img src="images/candle9.jpg" alt="Flower and More Candle">
+        <div class="candle-image">
+          <div class="flame"></div>
+          <img src="images/candle9.jpg" alt="Flower and More Candle">
+        </div>
         <h4>Flower and More Candle</h4>
-        <p>$4.99</p>
+        <p>$9.99</p>
         <a class="buy-btn" href="https://paypal.me/YourName/20" target="_blank">Buy with PayPal</a>
       </div>
     </div>
@@ -133,18 +154,15 @@
     <div id="graduation" class="product-category">
       <h3>Graduation</h3>
       <div class="product">
-        <img src="images/candle10.jpg" alt="Graduation Congrats Candle">
+        <div class="candle-image">
+          <div class="flame"></div>
+          <img src="images/candle10.jpg" alt="Graduation Congrats Candle">
+        </div>
         <h4>Graduation Congrats Candle</h4>
-        <p>$14.99</p>
+        <p>$19.99</p>
         <a class="buy-btn" href="https://paypal.me/YourName/22" target="_blank">Buy with PayPal</a>
       </div>
     </div>
-
-    <!-- Placeholder sections -->
-    <div id="gifting" class="product-category"><h3>Gifting</h3><p>Coming soon...</p></div>
-    <div id="babyshower" class="product-category"><h3>Babyshower</h3><p>Coming soon...</p></div>
-    <div id="birthday" class="product-category"><h3>Birthday</h3><p>Coming soon...</p></div>
-    <div id="study" class="product-category"><h3>Study Completion</h3><p>Coming soon...</p></div>
 
   </section>
 
@@ -156,5 +174,4 @@
 
 </body>
 </html>
-
 
