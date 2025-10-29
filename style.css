@@ -6,6 +6,12 @@ body {
   color: #333;
 }
 
+.logo {
+  width: 150px; /* adjust size if needed */
+  display: block;
+  margin: 0 auto 15px; /* centers the logo and adds space below */
+}
+
 header {
   text-align: center;
   padding: 50px 20px 20px;
