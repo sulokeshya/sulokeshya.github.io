@@ -3,39 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Candle Shop</title>
+  <title>Sulokeshya Handmade Candles</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Candle Flicker Background -->
+  <div class="candle-background"></div>
+
   <header>
-    <img src="images/logo.png" alt="Sulokeshya handmade candles Logo" class="logo">
-    <h1>✨ Sulokeshya handmade candles ✨</h1>
-    <p>Where every creation shines from the heart </p>
+    <img src="images/logo.png" alt="Sulokeshya Handmade Candles Logo" class="logo">
+    <h1>Sulokeshya Handmade Candles</h1>
+    <p class="slogan">Where every creation shines from the heart</p>
   </header>
 
+  <!-- Navigation / Categories -->
+  <nav>
+    <ul>
+      <li><a href="#halloween">Halloween Candle</a></li>
+      <li><a href="#christmas">Christmas Edition</a></li>
+      <li><a href="#drink">Drink & Latte Candle</a></li>
+      <li><a href="#desert">Dessert</a></li>
+      <li><a href="#gifting">Gifting</a></li>
+      <li><a href="#babyshower">Babyshower</a></li>
+      <li><a href="#birthday">Birthday</a></li>
+      <li><a href="#study">Study Completion</a></li>
+      <li><a href="#love">Love Gifting</a></li>
+      <li><a href="#graduation">Graduation</a></li>
+    </ul>
+  </nav>
+
   <section class="products">
-    <h2>Our Products</h2>
+    <h2>Our Featured Candles</h2>
 
-    <div class="product">
-      <img src="images/candle1.jpg" alt="Thanksgiving edition- santa vehicle Candle">
-      <h3>Thanksgiving edition-santa vehicle Candle</h3>
-      <p>Price: $13.99</p>
-      <a class="buy-btn" href="https://paypal.me/YourName/15" target="_blank">Buy with PayPal</a>
-      <p>Or pay via Zelle: mycandles@zelle.com</p>
+    <!-- Christmas Edition -->
+    <div id="christmas" class="product-category">
+      <h3>Christmas Edition</h3>
+      <div class="product">
+        <img src="images/candle1.jpg" alt="Thanksgiving Edition - The Santa Vehicle Candle">
+        <h4>Thanksgiving Edition - The Santa Vehicle Candle</h4>
+        <p>Price: $15</p>
+        <a class="buy-btn" href="https://paypal.me/YourName/15" target="_blank">Buy with PayPal</a>
+        <p>Or pay via Zelle: mycandles@zelle.com</p>
+      </div>
     </div>
 
-    <div class="product">
-      <img src="images/candle2.jpg" alt="Halloween edition- Pumpkin in the jar Candle">
-      <h3>Halloween edition- Pumpkin in the jar Candle</h3>
-      <p>Price: $15.99</p>
-      <a class="buy-btn" href="https://paypal.me/YourName/20" target="_blank">Buy with PayPal</a>
-      <p>Or pay via Zelle: mycandles@zelle.com</p>
+    <!-- Halloween Candle -->
+    <div id="halloween" class="product-category">
+      <h3>Halloween Candle</h3>
+      <div class="product">
+        <img src="images/candle2.jpg" alt="Halloween Edition - Pumpkin in the Jar Candle">
+        <h4>Halloween Edition - Pumpkin in the Jar Candle</h4>
+        <p>Price: $20</p>
+        <a class="buy-btn" href="https://paypal.me/YourName/20" target="_blank">Buy with PayPal</a>
+        <p>Or pay via Zelle: mycandles@zelle.com</p>
+      </div>
     </div>
+
+    <!-- Drink & Latte Candle -->
+    <div id="drink" class="product-category">
+      <h3>Drink & Latte Candle</h3>
+      <div class="product">
+        <img src="images/candle3.jpg" alt="Coffee Latte Candle">
+        <h4>Coffee Latte Candle</h4>
+        <p>Price: $18</p>
+        <a class="buy-btn" href="https://paypal.me/YourName/18" target="_blank">Buy with PayPal</a>
+        <p>Or pay via Zelle: mycandles@zelle.com</p>
+      </div>
+      <div class="product">
+        <img src="images/candle6.jpg" alt="Champion Glass Candle">
+        <h4>Champion Glass Candle</h4>
+        <p>Price: $22</p>
+        <a class="buy-btn" href="https://paypal.me/YourName/22" target="_blank">Buy with PayPal</a>
+        <p>Or pay via Zelle: mycandles@zelle.com</p>
+      </div>
+    </div>
+
+    <!-- Dessert -->
+    <div id="desert" class="product-category">
+      <h3>Dessert</h3>
+      <div class="product">
+        <img src="images/candle4.jpg" alt="Red Velvet Cupcake Candle">
+        <h4>Red Velvet Cupcake Candle</h4>
+        <p>Price: $19</p>
+        <a class="buy-btn" href="https://paypal.me/YourName/19" target="_blank">Buy with PayPal</a>
+        <p>Or pay via Zelle: mycandles@zelle.com</p>
+      </div>
+      <div class="product">
+        <img src="images/candle5.jpg" alt="Blue Lagoon Candle">
+        <h4>Blue Lagoon Candle</h4>
+        <p>Price: $20</p>
+        <a class="buy-btn" href="https://paypal.me/YourName/20" target="_blank">Buy with PayPal</a>
+        <p>Or pay via Zelle: mycandles@zelle.com</p>
+      </div>
+    </div>
+
+    <!-- Love Gifting -->
+    <div id="love" class="product-category">
+      <h3>Love Gifting</h3>
+      <div class="product">
+        <img src="images/candle7.jpg" alt="Yellow Love Candle">
+        <h4>Yellow Love Candle</h4>
+        <p>Price: $18</p>
+        <a class="buy-btn" href="https://paypal.me/YourName/18" target="_blank">Buy with PayPal</a>
+        <p>Or pay via Zelle: mycandles@zelle.com</p>
+      </div>
+      <div class="product">
+        <img src="images/candle8.jpg" alt="You Look Like Butterfly Candle">
+        <h4>You Look Like Butterfly Candle</h4>
+        <p>Price: $18</p>
+        <a class="buy-btn" href="https://paypal.me/YourName/18" target="_blank">Buy with PayPal</a>
+        <p>Or pay via Zelle: mycandles@zelle.com</p>
+      </div>
+      <div class="product">
+        <img src="images/candle9.jpg" alt="Flower and More Candle">
+        <h4>Flower and More Candle</h4>
+        <p>Price: $20</p>
+        <a class="buy-btn" href="https://paypal.me/YourName/20" target="_blank">Buy with PayPal</a>
+        <p>Or pay via Zelle: mycandles@zelle.com</p>
+      </div>
+    </div>
+
+    <!-- Graduation Candles -->
+    <div id="graduation" class="product-category">
+      <h3>Graduation Candles</h3>
+      <div class="product">
+        <img src="images/candle10.jpg" alt="Graduation Congrats Candle">
+        <h4>Graduation Congrats Candle</h4>
+        <p>Price: $22</p>
+        <a class="buy-btn" href="https://paypal.me/YourName/22" target="_blank">Buy with PayPal</a>
+        <p>Or pay via Zelle: mycandles@zelle.com</p>
+      </div>
+    </div>
+
+    <!-- Placeholders for other categories -->
+    <div id="gifting" class="product-category">
+      <h3>Gifting</h3>
+      <p>Products coming soon...</p>
+    </div>
+    <div id="babyshower" class="product-category">
+      <h3>Babyshower</h3>
+      <p>Products coming soon...</p>
+    </div>
+    <div id="birthday" class="product-category">
+      <h3>Birthday</h3>
+      <p>Products coming soon...</p>
+    </div>
+    <div id="study" class="product-category">
+      <h3>Study Completion</h3>
+      <p>Products coming soon...</p>
+    </div>
+
   </section>
 
   <footer>
-    <p>Contact us: <a href="mailto:mycandleshop@example.com">mycandleshop@example.com</a></p>
-    <p>&copy; 2025 My Candle Shop</p>
+    <p>Contact us: <a href="mailto:sulokeshyacandles@gmail.com">sulokeshyacandles@gmail.com</a></p>
+    <p>&copy; 2025 Sulokeshya Handmade Candles</p>
   </footer>
 </body>
 </html>
+
