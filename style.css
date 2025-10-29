@@ -1,67 +1,118 @@
+/* General Styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff8f0;
+  background: #fff8f0;
   color: #333;
+  position: relative;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-.logo {
-  width: 150px; /* adjust size if needed */
-  display: block;
-  margin: 0 auto 15px; /* centers the logo and adds space below */
+/* Candle Flicker Background */
+.candle-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://i.ibb.co/3s5YJxz/candle-bg.png') repeat;
+  opacity: 0.08;
+  z-index: -1;
+  animation: flicker 3s infinite alternate;
 }
 
-header {
-  text-align: center;
-  padding: 50px 20px 20px;
-  background-color: #ffe4c4;
+/* Flicker Animation */
+@keyframes flicker {
+  0% { opacity: 0.05; transform: scale(1); }
+  25% { opacity: 0.08; transform: scale(1.01); }
+  50% { opacity: 0.06; transform: scale(0.99); }
+  75% { opacity: 0.09; transform: scale(1.02); }
+  100% { opacity: 0.07; transform: scale(1); }
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-  color: #b5651d;
-}
-
-header p {
-  margin: 5px 0 0;
-  font-size: 1.2em;
-}
-
+/* Header */
 header {
   text-align: center;
   padding: 50px 20px 30px;
   background: linear-gradient(to right, #ffe4c4, #fff0e0);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
-.product:hover {
-  transform: scale(1.05);
+header h1 {
+  margin: 10px 0 5px;
+  font-size: 2.5em;
+  color: #b5651d;
+}
+
+header .slogan {
+  font-size: 1.2em;
+  color: #8b3e0f;
+}
+
+/* Logo */
+.logo {
+  width: 150px;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+/* Navigation / Categories */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  margin: 0 0 30px 0;
+}
+
+nav ul li {
+  margin: 5px 15px;
+  padding: 10px 15px;
+  background-color: #b5651d;
+  border-radius: 8px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
   transition: 0.3s;
 }
 
-.buy-btn {
-  border-radius: 12px;
-  background-color: #d2691e;
+nav ul li a:hover {
+  color: #ffe4c4;
+  transform: scale(1.05);
 }
-.buy-btn:hover {
-  background-color: #b3540f;
+
+/* Products Section */
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 10px;
 }
 
 .products h2 {
   text-align: center;
   font-size: 2em;
+  width: 100%;
   margin-bottom: 30px;
 }
 
-.products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 30px 10px;
+.product-category {
+  margin-bottom: 40px;
 }
 
-.product {
+.product-category h3 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+/* Responsive Grid for Products */
+.product-category .product {
   background-color: #fff3e0;
   border: 1px solid #f5d6b2;
   border-radius: 10px;
@@ -70,27 +121,43 @@ header {
   width: 250px;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.3s;
 }
 
-.product img {
+.product-category {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Hover effect */
+.product-category .product:hover {
+  transform: scale(1.05);
+}
+
+.product-category img {
   max-width: 100%;
   border-radius: 8px;
 }
 
+/* Buy Button */
 .buy-btn {
   display: inline-block;
   margin: 10px 0;
   padding: 10px 20px;
-  background-color: #b5651d;
+  background-color: #d2691e;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 12px;
+  transition: 0.3s;
 }
 
 .buy-btn:hover {
-  background-color: #8b3e0f;
+  background-color: #b3540f;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -101,4 +168,20 @@ footer {
 footer a {
   color: #b5651d;
   text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2em;
+  }
+  header .slogan {
+    font-size: 1em;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    margin: 5px 0;
+  }
 }
